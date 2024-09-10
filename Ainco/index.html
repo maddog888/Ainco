@@ -1,0 +1,194 @@
+<!Doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Iot 中控</title>
+    <link href="./css/bootstrap.css?v=18" rel="stylesheet">
+    <link href="./css/iot.css?v=111133" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <main class="container py-3">
+        <!--  默认头部区域  -->
+        <header>
+            <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom wcard shadow-sm">
+                <a href="#" class="d-flex align-items-center text-dark text-decoration-none distext">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-intersect" viewBox="0 0 16 16">
+                    <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm5 10v2a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-2v5a2 2 0 0 1-2 2H5zm6-8V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2V6a2 2 0 0 1 2-2h5z"/>
+                    </svg>
+                    <span class="fs-4" style="padding-left: 15px;">Wen Iot</span>
+                </a>
+                <!--
+                <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+                    <a class="me-3 py-2 text-dark text-decoration-none distext" href="#" id="webState">服务端：<span class="badge text-bg-warning">连接中</span></a>
+                </nav>
+                -->
+              
+            </div>
+        </header>
+        <!--  默认头部区域  -->
+
+        <!--  在以下区域添加新的模块即可  -->
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-5 g-2">
+            <!--
+                <div class="col">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="row g-0 justify-content-center align-items-center">
+                            <div class="col-4 col-md-5" style="text-align: center;">
+                                <i class="bi bi-lamp" style="font-size: 2rem;padding-left:10px;"></i>
+                            </div>
+                            <div class="col-8 col-md-7">
+                                <div class="card-body">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="led1" style="width: 2.8rem;height: 1.5rem;">
+                                    </div>
+                                    <br>
+                                    <p class="card-text" style="margin-top: -18px;"><small class="text-muted">房间灯开关</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            -->
+
+ 
+            <div class="col">
+                <div class="card mb-3 shadow-sm">
+                    <a href="#" id="A_lockScreen" class="text-dark text-decoration-none distext">
+                        <div class="row g-0 justify-content-center align-items-center">
+                            <div class="col-4 col-md-5" style="text-align: center;">
+                                <i class="bi bi-person-fill-lock" style="font-size: 2rem;padding-left:10px;"></i>
+                            </div>
+                            <div class="col-8 col-md-7">
+                                <div class="card-body">
+                                    <h3 class="card-title" id="temperature">锁屏</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card mb-3 shadow-sm">
+                    <a href="#" id="A_muted" class="text-dark text-decoration-none distext">
+                        <div class="row g-0 justify-content-center align-items-center">
+                            <div class="col-4 col-md-5" style="text-align: center;">
+                                <i class="bi bi-volume-mute-fill" style="font-size: 2rem;padding-left:10px;"></i>
+                            </div>
+                            <div class="col-8 col-md-7">
+                                <div class="card-body">
+                                    <h3 class="card-title" id="temperature">静音</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card mb-3 shadow-sm">
+                    <a href="#" id="A_volumeSubtract" class="text-dark text-decoration-none distext">
+                        <div class="row g-0 justify-content-center align-items-center">
+                            <div class="col-4 col-md-5" style="text-align: center;">
+                                <i class="bi bi-volume-off-fill" style="font-size: 2rem;padding-left:10px;"></i>
+                            </div>
+                            <div class="col-8 col-md-7">
+                                <div class="card-body">
+                                    <h3 class="card-title" id="temperature">音量-</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card mb-3 shadow-sm">
+                    <a href="#" id="A_volumeAdd" class="text-dark text-decoration-none distext">
+                        <div class="row g-0 justify-content-center align-items-center">
+                            <div class="col-4 col-md-5" style="text-align: center;">
+                                <i class="bi bi-volume-up-fill" style="font-size: 2rem;padding-left:10px;"></i>
+                            </div>
+                            <div class="col-8 col-md-7">
+                                <div class="card-body">
+                                    <h3 class="card-title" id="temperature">音量+</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card mb-3 shadow-sm">
+                    <a href="#" id="A_brSub" class="text-dark text-decoration-none distext">
+                        <div class="row g-0 justify-content-center align-items-center">
+                            <div class="col-4 col-md-5" style="text-align: center;">
+                                <i class="bi bi-brightness-low-fill" style="font-size: 2rem;padding-left:10px;"></i>
+                            </div>
+                            <div class="col-8 col-md-7">
+                                <div class="card-body">
+                                    <h3 class="card-title" id="temperature">亮度-</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card mb-3 shadow-sm">
+                    <a href="#" id="A_brAdd" class="text-dark text-decoration-none distext">
+                        <div class="row g-0 justify-content-center align-items-center">
+                            <div class="col-4 col-md-5" style="text-align: center;">
+                                <i class="bi bi-brightness-high-fill" style="font-size: 2rem;padding-left:10px;"></i>
+                            </div>
+                            <div class="col-8 col-md-7">
+                                <div class="card-body">
+                                    <h3 class="card-title" id="temperature">亮度+</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+           
+        </div>
+
+        <!--  在以上区域添加新的模块即可  -->
+
+        <!--调试区域-->
+        
+        <div class="mb-3">
+            <label class="form-label" for="chat">消息日志：<button type="button" class="btn btn-link" onclick="javsscript:$('#chat').text('');">清空日志</button></label>
+            <textarea class="form-control" id="chat" rows="3"></textarea>
+        </div>
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="发送消息到设备" id="message">
+            <button class="btn btn-primary" type="button" id="send">发送</button>
+        </div>
+        
+        <!--调试区域-->
+    </main>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 引入 Bootstrap JS 文件 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script>
+        // 创建一个 MQTT 客户端
+        const client = mqtt.connect('wss://broker.emqx.io:8084/mqtt');
+        // 获取 URL 中的参数
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        let topic = urlParams.get('topic');
+
+        if (!topic) {
+            topic = "test";
+        }
+    </script>
+    <script src="./js/wen.js?v=142"></script>
+</body>
+</html>
