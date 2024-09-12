@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23091" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23091"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="dqn-nb-4bw" id="kkg-zK-KOe"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+            <items>
+                <menuItem title="Ainco" id="1Xt-HY-uBw">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Ainco" systemMenu="apple" id="uQy-DD-JDr">
+                        <items>
+                            <menuItem title="关于 Ainco" id="5kV-Vb-QxS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="缩小窗口" keyEquivalent="m" id="GGg-14-SBM">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="JJm-J5-wMs"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="关闭窗口" keyEquivalent="w" id="Lhm-DV-Tsz">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="s83-eS-I1H"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                            <menuItem title="菜单显示与关闭" keyEquivalent="s" id="ulp-J8-Br4">
+                                <attributedString key="attributedTitle"/>
+                                <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                <connections>
+                                    <action selector="toggleSidebar:" target="-1" id="EnF-PL-KgX"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="Nw8-af-UfL"/>
+                            <menuItem title="完全退出" keyEquivalent="q" id="4sb-4s-VLi">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Edit" id="VYV-aR-4N1">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Edit" id="hZh-aW-xeS">
+                        <items>
+                            <menuItem title="Undo" keyEquivalent="z" id="rOx-Vu-u3O">
+                                <connections>
+                                    <action selector="undo:" target="-1" id="auH-e4-RZV"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Redo" keyEquivalent="Z" id="aEc-J9-mGO">
+                                <connections>
+                                    <action selector="redo:" target="-1" id="tmu-Gg-ssi"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="FNo-cF-qeR"/>
+                            <menuItem title="Cut" keyEquivalent="x" id="gI0-vW-BLj">
+                                <connections>
+                                    <action selector="cut:" target="-1" id="zoJ-jP-7Qp"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy" keyEquivalent="c" id="c9B-am-7Bb">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="Mdj-M3-JbO"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste" keyEquivalent="v" id="xLB-e3-d1d">
+                                <connections>
+                                    <action selector="paste:" target="-1" id="et3-Xo-q5i"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Delete" id="RcO-je-t2b">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="delete:" target="-1" id="cU0-8S-nsH"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Select All" keyEquivalent="a" id="vQb-fU-9d1">
+                                <connections>
+                                    <action selector="selectAll:" target="-1" id="681-lh-kUv"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="73" y="-72"/>
+        </menu>
+        <customObject id="dqn-nb-4bw" customClass="AppDelegate" customModule="Ainco" customModuleProvider="target"/>
+    </objects>
+</document>
